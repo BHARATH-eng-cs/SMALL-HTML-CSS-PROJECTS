@@ -1,0 +1,12 @@
+.CONTAINER {
+    align-items: center;
+    padding-top: 40px;
+    margin-top: 150px;
+shape-margin: 45px;
+margin-left: 200px;
+margin-right: 200px;
+border: 5px;
+border-style: dashed;
+border-color: red;
+padding-bottom: 40px;
+}
