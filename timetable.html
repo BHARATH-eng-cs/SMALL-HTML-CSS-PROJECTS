@@ -1,0 +1,173 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>R.V.S. College - III Year Timetable (2025-2026 Odd Semester)</title>
+  <style>
+    :root{
+      --accent:#2b6cb0;
+      --muted:#666;
+      --border:#ddd;
+      --paper:#fafafa;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    body{background:var(--paper);margin:20px;color:#222}
+    .sheet{max-width:1100px;margin:0 auto;background:white;padding:24px;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    header .title{flex:1;text-align:center}
+    header h1{margin:0;font-size:20px;letter-spacing:1px}
+    header p{margin:4px 0;color:var(--muted);font-size:13px}.meta{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.meta .box{flex:1;padding:8px 10px;border:1px solid var(--border);border-radius:4px;text-align:center}
+
+table.timetable{width:100%;border-collapse:collapse;margin-top:6px}
+table.timetable th, table.timetable td{border:1px solid var(--border);padding:8px;text-align:center;font-size:13px}
+table.timetable thead th{background:linear-gradient(90deg,rgba(43,108,176,0.08),transparent);font-weight:600}
+table.timetable .time{font-weight:600;font-size:12px}
+.interval{background:#f5f5f5;color:var(--muted);font-weight:600}
+.lunch{background:#fff3cd;color:#7a5b00;font-weight:700}
+
+/* legend / subjects */
+.legend{margin-top:18px}
+.legend table{width:100%;border-collapse:collapse}
+.legend th, .legend td{border:1px solid var(--border);padding:8px;text-align:left;font-size:13px}
+.legend th{background:#f7f7f7}
+
+@media (max-width:900px){
+  .sheet{padding:12px}
+  table.timetable th, table.timetable td{padding:6px;font-size:12px}
+}
+
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <header>
+      <div style="width:80px"><!-- logo placeholder --></div>
+      <div class="title">
+        <h1>R.V.S. COLLEGE OF ENGINEERING</h1>
+        <p>Department of Computer Science and Engineering — III Year<br>Time Table 2025-2026 Odd Semester</p>
+
+
+  
+<!-- Timetable -->
+<table class="timetable" aria-describedby="timetable-caption">
+  <caption id="timetable-caption" style="text-align:left;margin-bottom:8px;font-weight:600">Weekly timetable </caption>
+  <thead>
+    <tr>
+      <th>DAYS</th>
+      <th class="time">9.00am - 9.50am</th>
+      <th class="time">9.50am - 10.40am</th>
+      <th class="time">10.40am - 10.55am</th>
+      <th class="time">10.55am - 11.45am</th>
+      <th class="time">11.45am - 12.35pm</th>
+      <th class="time">12.35pm - 1.25pm<br><small>(Lunch)</small></th>
+      <th class="time">1.25pm - 2.15pm</th>
+      <th class="time">2.15pm - 3.05pm</th>
+      <th class="time">3.05pm - 3.55pm</th>
+      <th class="time">3.55pm - 4.45pm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>MON</th>
+      <td>BDA</td>
+      <td>WT</td>
+      <td class="interval">Interval</td>
+      <td>CN</td>
+      <td>CD</td>
+      <td class="lunch">LUNCH</td>
+      <td>CCS</td>
+      <td>CCS</td>
+      <td>DC</td>
+      <td>DRRM</td>
+    </tr>
+    <tr>
+      <th>TUE</th>
+      <td>CN</td>
+      <td>CN</td>
+      <td class="interval">Interval</td>
+      <td>WT</td>
+      <td>WT</td>
+      <td class="lunch">LUNCH</td>
+      <td>DRRM</td>
+      <td>BDA</td>
+      <td>CCS</td>
+      <td>CD</td>
+    </tr>
+    <tr>
+      <th>WED</th>
+      <td>CD</td>
+      <td>CCS</td>
+      <td class="interval">Interval</td>
+      <td>BDA</td>
+      <td>BDA</td>
+      <td class="lunch">LUNCH</td>
+      <td>DC</td>
+      <td>CN</td>
+      <td>LIB</td>
+      <td>CCS</td>
+    </tr>
+    <tr>
+      <th>THU</th>
+      <td>CSS</td>
+      <td>CD</td>
+      <td class="interval">Interval</td>
+      <td>DC</td>
+      <td>WT</td>
+      <td class="lunch">LUNCH</td>
+      <td>CN</td>
+      <td>BDA</td>
+      <td>DC</td>
+      <td>DRRM</td>
+    </tr>
+    <tr>
+      <th>FRI</th>
+      <td>NM</td>
+      <td>NM</td>
+      <td class="interval">Interval</td>
+      <td>NM</td>
+      <td>NM</td>
+      <td class="lunch">LUNCH</td>
+      <td>CD</td>
+      <td>CD</td>
+      <td>Wt</td>
+      <td>BDA</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Legend / Subject list -->
+<section class="legend" aria-labelledby="legend-title">
+  <h3 id="legend-title" style="margin:12px 0 8px 0;font-size:15px">Subject Codes & Details</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:18%">Subject Code</th>
+        <th style="width:42%">Subject Name</th>
+        <th style="width:32%">Faculty Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>CCS375</td><td>Web Technologies</td><td>Mr. M. Karthik Prabu, AP/CSE</td></tr>
+      <tr><td>CS3551</td><td>Distributed Computing</td><td>Mrs. R. B. Rama Devi, AP/CSE</td></tr>
+      <tr><td>CS3501</td><td>Compiler Design</td><td>Mr. R. Subramanian, HOD/AI&DS</td></tr>
+      <tr><td>CS3591</td><td>Computer Network</td><td>Mrs. A. Gomathi, AP/CSE</td></tr>
+      <tr><td>CB3491</td><td>Cryptography And Network Security</td><td>Mrs. Shanthi, AP/CSE</td></tr>
+      <tr><td>CS8091</td><td>Big Data Analytics</td><td>Mrs. Sripriya, AP/CSE</td></ts>
+    </tbody>
+  </table>
+</section>
+
+<footer style="margin-top:14px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between">
+  <div>Time Table In-Charge</div>
+  <div>HoD / Principal</div>
+</footer>
+
+      <tr><td>DONE BY BHARATH.T BE (CSE)</td></tr>
+
+  </div>
+</body>
+
+</html>
