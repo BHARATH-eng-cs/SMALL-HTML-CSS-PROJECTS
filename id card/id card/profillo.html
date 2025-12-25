@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bharath | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      height: 100vh;
+      background-color: #1e293b;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1100px;
+    }
+
+    .text {
+      max-width: 55%;
+    }
+
+    .text h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .text h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .text p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .text a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #38bdf8;
+      color: #0f172a;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .profile-img img {
+      width: 280px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #1e293b;
+      padding: 8px 14px;
+      margin: 8px 8px 0 0;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #020617;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="text">
+        <h1>Bharath</h1>
+        <h2>CSE 3rd Year | Full Stack Developer</h2>
+        <p>
+          I am a Computer Science Engineering student passionate about building
+          modern web applications. I am actively learning full stack development
+          and open to internship opportunities.
+        </p>
+        <a href="mailto:bharathcse1122@gmail.com">Contact Me</a>
+      </div>
+
+      <div class="profile-img">
+        <img src="Gemini_Generated_Image_ufvb8wufvb8wufvb.png" alt="Bharath">
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I am Bharath, a 3rd year Computer Science Engineering student. I enjoy
+      designing and developing websites using HTML, CSS, JavaScript, and backend
+      technologies. I am open to internships where I can apply my skills and grow
+      as a developer.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Git & GitHub</span>
+      <span>Frontend Development</span>
+      <span>Backend Basics</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <strong>bharathcse1122@gmail.com</strong></p>
+    <p>Status: <strong>Open to Internship</strong></p>
+  </section>
+
+  <footer>
+    © 2025 Bharath | Portfolio Website
+  </footer>
+
+  <script>
+    // #region agent log
+    (function() {
+      const logEndpoint = 'http://127.0.0.1:7242/ingest/14617ac5-de04-45c0-8c9c-cc849a563405';
+      const log = (location, message, data, hypothesisId) => {
+        const logEntry = {
+          location,
+          message,
+          data: data || {},
+          timestamp: Date.now(),
+          sessionId: 'debug-session',
+          runId: 'run1',
+          hypothesisId
+        };
+        console.log('[DEBUG]', logEntry);
+        fetch(logEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(logEntry)
+        }).catch(err => console.error('[LOG ERROR]', err));
+      };
+
+      // Hypothesis A: Background image loading
+      const header = document.querySelector('header');
+      if (header) {
+        const bgStyle = window.getComputedStyle(header);
+        const bgImage = bgStyle.backgroundImage;
+        log('profillo.html:23', 'Background image check', { bgImage, hasUrl: bgImage.includes('url'), isNone: bgImage === 'none' }, 'A');
+        
+        // Test if bg.jpg exists
+        const testImg = new Image();
+        testImg.onload = () => log('profillo.html:23', 'bg.jpg loaded successfully', { exists: true }, 'A');
+        testImg.onerror = () => log('profillo.html:23', 'bg.jpg failed to load', { exists: false, error: '404 or invalid' }, 'A');
+        testImg.src = 'bg.jpg';
+      }
+
+      // Hypothesis B: Profile image loading
+      const profileImg = document.querySelector('.profile-img img');
+      if (profileImg) {
+        log('profillo.html:131', 'Profile img element found', { src: profileImg.src, complete: profileImg.complete }, 'B');
+        profileImg.onload = () => log('profillo.html:131', 'Profile image loaded', { width: profileImg.naturalWidth, height: profileImg.naturalHeight }, 'B');
+        profileImg.onerror = () => log('profillo.html:131', 'Profile image failed to load', { src: profileImg.src }, 'B');
+        if (profileImg.complete) {
+          log('profillo.html:131', 'Profile image already loaded', { width: profileImg.naturalWidth, height: profileImg.naturalHeight }, 'B');
+        }
+      }
+
+      // Hypothesis C: Media query application
+      const checkMediaQuery = () => {
+        const mq = window.matchMedia('(max-width: 768px)');
+        const container = document.querySelector('.container');
+        if (container) {
+          const flexDir = window.getComputedStyle(container).flexDirection;
+          log('profillo.html:102', 'Media query check', { 
+            windowWidth: window.innerWidth, 
+            matches: mq.matches, 
+            flexDirection: flexDir,
+            expected: mq.matches ? 'column' : 'row'
+          }, 'C');
+        }
+      };
+      checkMediaQuery();
+      window.addEventListener('resize', checkMediaQuery);
+
+      // Hypothesis D: Layout calculations
+      const checkLayout = () => {
+        const container = document.querySelector('.container');
+        const textDiv = document.querySelector('.text');
+        const profileDiv = document.querySelector('.profile-img');
+        if (container && textDiv && profileDiv) {
+          const containerRect = container.getBoundingClientRect();
+          const textRect = textDiv.getBoundingClientRect();
+          const profileRect = profileDiv.getBoundingClientRect();
+          log('profillo.html:31', 'Layout dimensions', {
+            containerWidth: containerRect.width,
+            containerHeight: containerRect.height,
+            textWidth: textRect.width,
+            textHeight: textRect.height,
+            profileWidth: profileRect.width,
+            profileHeight: profileRect.height,
+            windowWidth: window.innerWidth
+          }, 'D');
+        }
+      };
+      window.addEventListener('load', checkLayout);
+      setTimeout(checkLayout, 100);
+
+      // Hypothesis E: Resource loading timing
+      log('profillo.html:115', 'DOMContentLoaded', { readyState: document.readyState }, 'E');
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          log('profillo.html:115', 'DOMContentLoaded fired', { timestamp: Date.now() }, 'E');
+        });
+      }
+      window.addEventListener('load', () => {
+        log('profillo.html:115', 'Window load complete', { timestamp: Date.now() }, 'E');
+      });
+    })();
+    // #endregion
+  </script>
+
+</body>
+</html>

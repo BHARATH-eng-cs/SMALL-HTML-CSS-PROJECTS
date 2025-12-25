@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main card */
+.CONTAINER {
+    width: 350px;
+    height: 220px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0a4d8c;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    color: #0a4d8c;
+    margin-bottom: 10px;
+}
+
+/* Address section */
+.address {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.address h4 {
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+/* Barcode */
+.address img {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    height: auto;
+}
+
+/* Info section */
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.mail {
+    color: #0a4d8c;
+}
+
+.web {
+    color: #555;
+}

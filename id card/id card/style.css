@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card container */
+.CONTAINER {
+    width: 350px;
+    height: 480px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border: 2px solid #0a4d8c;
+}
+
+/* Title */
+.title {
+    color: #0a4d8c;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+/* Student photo */
+.CONTAINER img {
+    width: 120px;
+    height: 140px;
+    border-radius: 8px;
+    border: 2px solid #0a4d8c;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+/* Student details */
+.CONTAINER h3 {
+    font-size: 15px;
+    margin: 6px 0;
+    color: #333;
+}
+
+/* Signatures */
+.signs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.HOD,
+.PRINCIPAL {
+    border-top: 1px solid #000;
+    padding-top: 4px;
+    width: 45%;
+}
+
+/* Button */
+button {
+    margin-top: 25px;
+    padding: 8px 16px;
+    border: none;
+    background: #0a4d8c;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #083a6a;
+}
